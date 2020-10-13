@@ -9,10 +9,10 @@ build:
   build_file: none
   output_files: output/*.zip
   image_template: elasticsearch-7.9
-  image_name: alpha/elasticsearch
+  image_name: exf-dev/elasticsearch
 
 deploy:
-  context: alpha/DEV
+  context: exf-dev/DEV
   type: elasticsearch6  
   replicas: 1
   port:
