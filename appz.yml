@@ -1,18 +1,18 @@
 app:
   name: AppzElasticsearch
   code: AES
-  notify: appz@cloudbourne.co
+  notify: mniju@ecloudcontrol.com
 
 build:
-  version: 7.9
+  version: 7.12
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: elasticsearch-7.9
+  image_template: elasticsearch-7.12
   image_name: alpha/elasticsearch
 
 deploy:
-  context: alpha/DEV
+  context: minnaniju/DEV
   type: elasticsearch6  
   replicas: 1
   port:
