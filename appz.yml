@@ -29,4 +29,16 @@ monitor:
   notify: appzops@cloudbourne.co      
 
 properties:
+  ELASTIC_PASSWORD:
+    vault: ELASTIC_PASSWORD  
+  ES_DEFAULT_USER: elastic
+  ES_LOG_STYLE: console
+  ES_USER1: user1
+  ES_PASS1:
+    vault: ES_USER1_PASSWORD
+  ES_ROLE1: superuser
+  ES_USER2: user2
+  ES_PASS2:
+    vault: ES_USER2_PASSWORD
+  ES_ROLE2: superuser
   revision : 03
