@@ -47,4 +47,4 @@ properties:
   ES_PASS2:
     vault: ES_USER2_PASSWORD
   ES_ROLE2: superuser
-  revision : 03
+  revision : 04
