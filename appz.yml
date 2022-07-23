@@ -1,49 +1,37 @@
 app:
-  name: AppzElasticsearch
-  code: AES
-  notify: mniju@ecloudcontrol.com
-
+    name: elasticsearch
+    code: ELASTICSEARCH
+    notify: minnaniju@ecloudcontrol.com
 build:
-  version: 7.12
-  env: DEV
-  build_file: none
-  output_files: output/*.zip
-  image_template: elasticsearch-7.12
-
+    version: 7.12
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: elasticsearch-7.12
 deploy:
-  context: minnaniju/DEV
-  type: elasticsearch6  
-  replicas: 1
-  port:
-  - 9200
-  - 9300
-
+    context: minnaniju/DEV
+    replicas: 1
+    type: statefulset
+    port:
+    - 9200
+    - 9300
 volumes:
-- claim: elasticsearch-data
-  mount: /appz/data
-  name: elasticsearch-data
-  size: 20Gi
-
-monitor:
-  notify: appzops@cloudbourne.co      
-
+  - claim: es-data
+    mount: /appz/data
+    name: data
+    size: 10Gi
+    
 properties:
-  VAULT_ADDR: https://vault:8200 -e 
-  VAULT_SKIP_VERIFY: true
-  VAULT_ROLE_ID: VAULT_ROLE_ID
-  VAULT_SECRET_ID: VAULT_SECRET_ID
-  VAULT_APPROLE: VAULT_APPROLE
-  ELASTIC_PASSWORD:
-    vault: ELASTIC_PASSWORD  
-  ES_DEFAULT_USER: elastic
-  ES_LOG_STYLE: console
-  ES_USER1: user1
-  ES_PASS1:
-    vault: ES_USER1_PASSWORD
-  ES_ROLE1: superuser
-  ES_USER2: user2
-  ES_PASS2:
-    vault: ES_USER2_PASSWORD
-  ES_ROLE2: superuser
-  TINI_SUBREAPER: true
-  revision : 05
+    ELASTIC_PASSWORD:
+        vault: ELASTIC_PASSWORD
+    ES_DEFAULT_USER: elastic
+    ES_LOG_STYLE: console
+    ES_USER1: User1
+    ES_PASS1:
+        vault: ES_PASS1
+    ES_ROLE1: superuser
+    ES_USER2: user2
+    ES_PASS2: 
+        vault: ES_PASS2
+    ES_ROLE2: superuser
+    TINI_SUBREAPER: true
