@@ -16,7 +16,7 @@ deploy:
     - 9200
     - 9300
 volumes:
-  - claim: es-data
+  - claim: elastic-data
     mount: /appz/data
     name: data
     size: 10Gi
