@@ -9,7 +9,6 @@ build:
   build_file: none
   output_files: output/*.zip
   image_template: elasticsearch-7.12
-  image_name: alpha/elasticsearch
 
 deploy:
   context: minnaniju/DEV
@@ -47,4 +46,6 @@ properties:
   ES_PASS2:
     vault: ES_USER2_PASSWORD
   ES_ROLE2: superuser
+  xpack.security.enabled: false
+  TINI_SUBREAPER: true
   revision : 05
