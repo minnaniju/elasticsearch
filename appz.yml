@@ -28,10 +28,11 @@ volumes:
     size: 10Gi
     
 properties:
-    http.host: 0.0.0.0
-    xpack.security.enabled: false
-    discovery.type: single-node 
-    path.data: /appz/data/nodes 
+    environment:
+       - http.host: 0.0.0.0
+       - xpack.security.enabled: false
+       - discovery.type: single-node 
+       - path.data: /appz/data/nodes 
     ELASTIC_PASSWORD:
         vault: ELASTIC_PASSWORD
     ES_DEFAULT_USER: elastic
