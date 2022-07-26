@@ -6,11 +6,6 @@ build:
     version: 7.12
     env: DEV
     build_file: none
-    #args:
-      #http.host: 0.0.0.0
-      #xpack.security.enabled: false
-      #discovery.type: single-node 
-      #path.data: /appz/data/nodes 
     output_files: output/*.zip
     image_template: elasticsearch-7.12
  
