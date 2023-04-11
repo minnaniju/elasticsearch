@@ -1,13 +1,13 @@
 app:
     name: elasticsearch
     code: ELASTICSEARCH
-    notify: minnaniju@ecloudcontrol.com
+    notify: mniju@ecloudcontrol.com
 build:
-    version: 7.12
+    version: 7.10
     env: DEV
     build_file: none
     output_files: output/*.zip
-    image_template: elasticsearch-7.12
+    image_template: elasticsearch-7.10
  
 deploy:
     context: minnaniju/DEV
