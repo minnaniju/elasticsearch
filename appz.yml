@@ -23,17 +23,17 @@ volumes:
     size: 10Gi
     
 properties:
-    ELASTIC_PASSWORD:
-        vault: ELASTIC_PASSWORD
-    ES_DEFAULT_USER: elastic
-    ES_LOG_STYLE: console
-    ES_USER1: User1
-    ES_PASS1:
-        vault: ES_PASS1
-    ES_ROLE1: superuser
-    ES_USER2: user2
-    ES_PASS2: 
-        vault: ES_PASS2
-    ES_ROLE2: superuser
-    TINI_SUBREAPER: true
+    #ELASTIC_PASSWORD:
+        #vault: ELASTIC_PASSWORD
+    #ES_DEFAULT_USER: elastic
+    #ES_LOG_STYLE: console
+    #ES_USER1: User1
+    #ES_PASS1:
+        #vault: ES_PASS1
+    #ES_ROLE1: superuser
+    #ES_USER2: user2
+    #ES_PASS2: 
+        #vault: ES_PASS2
+    #ES_ROLE2: superuser
+    #TINI_SUBREAPER: true
     revision: 20
