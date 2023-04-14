@@ -36,7 +36,8 @@ properties:
         #vault: ES_PASS2
     #ES_ROLE2: superuser
     #TINI_SUBREAPER: true
-    discovery.type: single-node
+    discovery:
+      type: singlenode
     discovery.seed_hosts : []
     http.host: 0.0.0.0
     xpack.security.enabled: false
