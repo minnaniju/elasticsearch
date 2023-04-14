@@ -36,4 +36,5 @@ properties:
         #vault: ES_PASS2
     #ES_ROLE2: superuser
     #TINI_SUBREAPER: true
+    discovery.type: single-node
     revision: 23
