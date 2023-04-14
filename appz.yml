@@ -37,8 +37,6 @@ properties:
     #ES_ROLE2: superuser
     #TINI_SUBREAPER: true
     discovery:
-      type: singlenode
-    discovery.seed_hosts : []
-    http.host: 0.0.0.0
-    xpack.security.enabled: false
+      - type=singlenode
+      - seed_hosts=[]
     revision: 23
